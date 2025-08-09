@@ -1,0 +1,28 @@
+import os
+
+# Define repo structure
+repo_structure = {
+    "nanoKimi": {
+        "model.py": "# Transformer + MoE + Latent Attention\n",
+        "optimizer.py": "# Muon optimizer\n",
+        "train.py": "# Training loop\n",
+        "benchmark.py": "# Runs CPU + GPU benchmarks, saves reports\n",
+        "utils.py": "",
+        "requirements.txt": "",
+        "README.md": "# nanoKimi\n\nA small transformer + MoE model with benchmarking tools.\n"
+    }
+}
+
+def create_structure(base_path, structure):
+    for name, content in structure.items():
+        path = os.path.join(base_path, name)
+        if isinstance(content, dict):  # directory
+            os.makedirs(path, exist_ok=True)
+            create_structure(path, content)
+        else:  # file
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(content)
+
+if __name__ == "__main__":
+    create_structure(".", repo_structure)
+    print("Repository structure created successfully!")

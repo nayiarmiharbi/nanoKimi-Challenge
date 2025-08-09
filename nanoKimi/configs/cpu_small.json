@@ -1,0 +1,14 @@
+{
+  "device": "cpu",
+  "batch_size": 2,
+  "max_steps": 50,
+  "model_size": "tiny",
+  "seq_len": 128,
+  "vocab_size": 20000,
+  "use_moe": true,
+  "moe_experts": 4,
+  "moe_k": 1,
+  "use_latent_attn": true,
+  "latent_slots": 8,
+  "lr": 2e-4
+}

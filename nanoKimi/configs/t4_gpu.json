@@ -1,0 +1,14 @@
+{
+  "device": "cuda",
+  "batch_size": 16,
+  "max_steps": 500,
+  "model_size": "small",
+  "seq_len": 256,
+  "vocab_size": 32000,
+  "use_moe": true,
+  "moe_experts": 8,
+  "moe_k": 2,
+  "use_latent_attn": true,
+  "latent_slots": 16,
+  "lr": 2e-4
+}
