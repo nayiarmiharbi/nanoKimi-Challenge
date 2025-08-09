@@ -1,0 +1,6 @@
+{
+  "val_perplexity": 5.6908961255715904e+166,
+  "tokens_per_sec_est": 60056.53741711576,
+  "peak_mem_MB": 6786.4501953125,
+  "params_count": 54387392
+}
